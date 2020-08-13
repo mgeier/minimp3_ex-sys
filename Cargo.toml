@@ -1,0 +1,27 @@
+[package]
+name = "minimp3_ex-sys"
+version = "0.0.0"
+authors = ["Matthias Geier <Matthias.Geier@gmail.com>"]
+license = "CC0-1.0"
+categories = ["multimedia", "external-ffi-bindings"]
+keywords = ["audio"]
+description = "FFI bindings to the minimp3_ex C library"
+repository = "https://github.com/mgeier/minimp3_ex-sys"
+edition = "2018"
+
+exclude = ["minimp3/vectors/*", "minimp3/player/*"]
+
+[features]
+float-output = []
+no-simd = []
+only-simd = []
+only-mp3 = []
+nonstandard-but-logical = []
+no-stdio = []
+allow-mono-stereo-transition = []
+
+[build-dependencies]
+cc = "1.0"
+
+[dependencies]
+libc = "0.2"
