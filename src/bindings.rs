@@ -843,6 +843,13 @@ extern "C" {
     pub fn mp3dec_ex_seek(dec: *mut mp3dec_ex_t, position: u64) -> libc::c_int;
 }
 extern "C" {
+    pub fn mp3dec_ex_read_frame(
+        dec: *mut mp3dec_ex_t,
+        buf: *mut *mut mp3d_sample_t,
+        max_samples: usize,
+    ) -> usize;
+}
+extern "C" {
     pub fn mp3dec_ex_read(dec: *mut mp3dec_ex_t, buf: *mut mp3d_sample_t, samples: usize) -> usize;
 }
 extern "C" {
