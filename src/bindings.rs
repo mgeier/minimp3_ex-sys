@@ -35,6 +35,9 @@ extern "C" {
     pub fn mp3dec_init(dec: *mut mp3dec_t);
 }
 extern "C" {
+    pub fn mp3dec_f32_to_s16(in_: *const f32, out: *mut i16, num_samples: libc::c_int);
+}
+extern "C" {
     pub fn mp3dec_decode_frame(
         dec: *mut mp3dec_t,
         mp3: *const u8,
