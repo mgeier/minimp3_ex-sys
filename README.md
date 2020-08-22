@@ -1,2 +1,4 @@
-Low-level Rust bindings for minimp3_ex
-======================================
+Rust FFI bindings to the `minimp3_ex` library
+=============================================
+
+Documentation: https://docs.rs/minimp3_ex-sys/

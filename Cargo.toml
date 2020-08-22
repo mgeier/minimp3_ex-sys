@@ -2,14 +2,22 @@
 name = "minimp3_ex-sys"
 version = "0.0.0"
 authors = ["Matthias Geier <Matthias.Geier@gmail.com>"]
+categories = ["multimedia::encoding", "external-ffi-bindings"]
+keywords = ["mp3"]
+description = "Raw FFI bindings to the minimp3_ex library"
 license = "CC0-1.0"
-categories = ["multimedia", "external-ffi-bindings"]
-keywords = ["audio"]
-description = "FFI bindings to the minimp3_ex C library"
 repository = "https://github.com/mgeier/minimp3_ex-sys"
 edition = "2018"
 
-exclude = ["minimp3/vectors/*", "minimp3/player/*"]
+exclude = [
+    ".*",
+    "/minimp3/minimp3_test.c",
+    "/minimp3/fuzzing/",
+    "/minimp3/huffopt/",
+    "/minimp3/player/",
+    "/minimp3/scripts/",
+    "/minimp3/vectors/",
+]
 
 [features]
 float-output = []
