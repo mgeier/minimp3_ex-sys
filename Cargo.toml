@@ -20,13 +20,8 @@ exclude = [
 ]
 
 [features]
+# NB: this feature is not additive!
 float-output = []
-no-simd = []
-only-simd = []
-only-mp3 = []
-nonstandard-but-logical = []
-no-stdio = []
-allow-mono-stereo-transition = []
 
 [build-dependencies]
 cc = "1.0"

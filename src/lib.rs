@@ -43,25 +43,18 @@ minimp3_ex-sys = "0.1"
 
 # Features
 
-The features of this crate don't behave like typical Rust features,
-e.g. they are not necessarily additive.
+The feature `float-output` changes the output data type ([`mp3d_sample_t`])
+from `i16` to `f32`.
 
-They are merely providing a way to set the `MINIMP3_*` preprocessor definitions
-used in `minimp3.h` and `minimp3_ex.h`.
-
-* `float-output`
-* `no-simd`
-* `only-simd`
-* `only-mp3`
-* `nonstandard-but-logical`
-* `no-stdio`
-* `allow-mono-stereo-transition`
+**WARNING:** This feature doesn't behave like typical Cargo features
+because it is not additive.
+If multiple instances of `minimp3_ex-sys` appear in the dependency tree
+and at least one of them has the `float-output` feature enabled,
+it will be enabled for all instances (probably leading to compiler errors).
+Hopefully, this doesn't happen in practice.
 
 The function [`mp3dec_f32_to_s16()`] is only available if the `float-output`
 feature is enabled.
-
-The type [`mp3d_sample_t`] changes from `i16` to `f32` when using
-`float-output`.
 
 The functions ending in `_w` are only available on Windows.
 
