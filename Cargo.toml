@@ -5,6 +5,7 @@ authors = ["Matthias Geier <Matthias.Geier@gmail.com>"]
 categories = ["multimedia::encoding", "external-ffi-bindings"]
 keywords = ["mp3"]
 description = "Raw FFI bindings to the minimp3_ex library"
+readme = "README.md"
 license = "CC0-1.0"
 repository = "https://github.com/mgeier/minimp3_ex-sys"
 edition = "2018"
