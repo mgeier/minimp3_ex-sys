@@ -1,6 +1,6 @@
 [package]
 name = "minimp3_ex-sys"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Matthias Geier <Matthias.Geier@gmail.com>"]
 categories = ["multimedia::encoding", "external-ffi-bindings"]
 keywords = ["mp3"]
