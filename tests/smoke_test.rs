@@ -24,4 +24,8 @@ fn open_dummy_cb() {
     let result =
         unsafe { ffi::mp3dec_ex_open_cb(decoder.as_mut_ptr(), &mut io, ffi::MP3D_SEEK_TO_SAMPLE) };
     assert_eq!(result, ffi::MP3D_E_IOERROR);
+    unsafe {
+        // Even though there was an IO error, we still have to free the reserved memory:
+        ffi::mp3dec_ex_close(decoder.as_mut_ptr());
+    }
 }
